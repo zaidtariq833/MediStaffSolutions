@@ -1,0 +1,195 @@
+.main_userProfileTable {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.main_userProfileTable .cennt {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* padding-top: 10%; */
+    padding-bottom: 5%;
+}
+
+.userProfileTable_feild {
+    height: fit-content;
+    border-radius: 0.25rem;
+    /* box-shadow: 0.5px .5px 3px #000; */
+    box-shadow: none;
+    overflow: hidden;
+    margin: auto;
+    padding:  0 !important;
+
+}
+
+/* .userProfileTable_feild .sec {
+    border-radius: 1px;
+    box-shadow: 0px 0px 1px #000;
+} */
+
+.userProfileTable_feild .sec .head label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.userProfileTable_feild .sec .body .body_inner ul {
+    position: relative;
+}
+
+.userProfileTable_feild .sec .body .body_inner ul::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    height: 70%;
+    width: 1px;
+    background-color: #000;
+}
+
+.userProfileTable_feild .sec .body .body_inner:last-child ul::after {
+    content: none;
+}
+
+.userProfileTable_feild .sec .body .body_inner h5 {
+    font-size: 13px !important;
+}
+
+.userProfileTable_feild .sec .body .body_inner ul li {
+    border: none !important;
+    padding: 5px 20px 5px 18px;
+    font-size: 12px;
+    position: relative;
+}
+
+.userProfileTable_feild .sec .body .body_inner ul li:first-child::after {
+    content: '';
+    position: absolute !important;
+    top: 5px;
+    left: 0;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALgAAAESCAMAAAB5He/JAAAAeFBMVEUAAAD///88PDyjo6OoqKjk5OS+vr4UFBQ3Nzf09PR8fHxVVVXn5+fY2Ni5ublHR0dCQkKNjY3w8PCTk5PT09PGxsbz8/N0dHRvb2+Dg4PMzMyurq6bm5tPT0/e3t6JiYklJSULCwtmZmZfX18tLS0bGxsgICBiYmJZvvI3AAAKdUlEQVR4nO2d6WKyOhCGo7a2KC4s7vvS9v7v8BgIMIEJIEwini/vnypE8kBD1pkJ62lROFjNfxj76q/2oZ4cmIZrTlZM0loHOz14OGMFzenRycHXRWyuq0OcDzH45JIUj13o+r4b7tIbIX7otODDmPF7Kh3sx0enql81Ein4NCYc5o+L+9lR5kUJvo3w/sQ3x51M3KRk/+F31EKE4H4E50WfnYGoW2aDmN2Lvrl0uRGCzzPuE6xQTtGhiPybLjc68I+oMuGfJl9yVfg14Uej6mVPlh0deITIPyxi3LG323nj+POCH//hn8iqczLwPcfaPj6EEepeEDr7tBLfZkWJQGTgvHiMH3+dqIn3sxP+PHnS0eOnyo/qQtvkua7EDQBx4FVP/C+oqkQq8NGD6ffx1338PedPnkVNeE5eXwJRgV9E+T1hvZJQVIoeYVkhuo6fvJq/jB2Kpw/xv2NB2AgRgYcCycU7U9PsbFw1thcR+FQUggX+SF0BzFN90ORIBP4hwKeKQiz+ETzVgCZHIvBBfXCiVp+4qAzV4MNeF4tKNFR4NJdHdRk/irqHaDhBCc47gXitsov/EZOOgvPX7voYOxRPP0YV1554E7oFzh9pRLwVDZGk5OChe2U8epZR6f6OG0lJP/HYJx7bdatW2URMm15cjnOFZSbKf5yIqJdFBC5GOrwbzkcOfdgf74vHHD9w7BVoIiJwMcq88c+8h8sCgb4M+LcR/3iL0xDlSHMZVzDFVUYQP9nTYHCKJykCfnSXpDmSZEkDPk2g4r54+MOAfqJaJky/01QrNOB/TCbvTdO55nncHmXcWH+9gUjAHfiARcPpL/an034hivoUplhS5EkCvoNYbF2YO3HkSXOSji0J+J3J2kvoYmoFFHqKPCnAh6yg9VCUEX+ILFFQdFcowH+KaFzf4/E3foYiU4JrnBR0JVp1AXzxPDfFskpr8GMTboKlrLbgDbnbk7cEn1YTqtSyaoHg4f46m38/pebcjN2fymk+W0tmASm436ByMC/Pz4N7r0aqK08Cd8+v5qmvu5uBT14N85wmCfjnq0me1acA/6pO2i19xeCr6pRd04qDN277XqnjA/z6aogmuvaYU52qi3IYMnx5By3Y2zSZsjyGFnHvOMF1HOsiGSuzRDtRV4ZYCZZMNml8I5QGIQMs9YH1nwIP9IEr581R8P6T4BcsNY2+dIK3GPBUSzWApgBvNeKpUl8fuObu70QbuMLgl0qK1aH24L5ebtX8c3twjXVhLLxGbA/+pVkXfP6ZpB5/hSy4aVlw07LgpmXBTcuCm5YFNy0LbloW3LRIwZ1hcBooRuX1NRmcgmGlLxYluBh93lstyIfCsCgwBz6nKFMf6UXmpsBvIGVjHxNo5nIzAy5Z1lyagkv5ld4+GfhBStrQd01ewSm1oSQDl5NumoFv5KuYAHflpOXlU6mbfJUyPzJN4OOSpCXKrSVZ8MKvt/sR1ypEwL3RkwoQ8HDFz2z2Bc+QNuBuZqcwRMCfXqeYI+DZKs3KpQKHa7gYOHqJMs1KwfMe2Y3BpZVQI+Byvd4UXC4IZsClhayG4Ll1H0PgsR9LG/Bt7owpcOB31gw8X2MYA++3Ay+sbBoDz9yFGoEXrFnMgQetwA/5M+bAx63ACyaJ5sDPrcALZ8yBMwseyYLLRyy4BUdlwQuy4LgseEFl4DmTsnUz8NzAyjcAnjNT3TcDl92BL5gRKTm43Ed3m82ryAXO0w/+OLOE37kv7O8TzJHuvZwvzBLDowXno28ws887zQ3sKPmC1Tn7yuf1i1aktOAwoiFjB07QwMSZrwY46ehqgeZEDB6vQDgBLx7jeDWigYlzvFw15HXibxCtFyJ3TwyeWmMmhrCNbMqHuYtgFvXE4HmbYxdJUkO5GVnMxYQaHM6ONfdMvEjkqLsdOTibZ5l+oAlqKXO2/pyjCejBGbtG4UeOg3MjZKHzgE9W+QuVs50OcCOy4KZlwU2rFXgXZMFN698Cd4RMgubzbFOr/OFZ6FHSBaAAv5oETwZxFvwdwaminddSMqqw4P8/cHfx4W24QVWw2/olqQanykQGwT83cvC98wYLNnqUU929zxeDO5j/9S3/RH0kYkUxDmWikQFwVTQc2QYPj893UdkaUoIr4hOqo/hA82RlBBdFUTcAruSGUOq7U9gw6wffYD8VymyF85FKgXCzce3gcqyV81wmTOoWGBp2f/SP0Lkft4TWDg6n3+a8enOhbXVirQluJ74XWOS1g4+wDIDZU1JawWya2CUKWKMFxd+hr2dSArWBg/RJnQyXh+Ij4Sp95En1Bxa/0GZINzgIE51V86BgZA3M5zS4nTOQAEtjEHx4789nh8N4fLtlDh5gWSWX3En9tDIjYzz6jvaigim7hDIkEGhHcZ+rV4CDPFSDJtj+492VJC6WQXC44olFdx3sBtACU+FCRAlez9nHOYNLYAnkTFSBa42DO7DpRPdvg1lcil4cLwI/SkuVWApYkr7Uext4uUtoBpc7r6ijp9xPPKuKillwuaeIBxkLc7l84x1ySvBTBbbfx38uK++2oOirJC2rAfDc2EwV1G3H/k6etKqJ+s6aA8/tWqD0wRbtDRxfY/doDFxeGZ6XT5pwgTE/NnqjBC/bVVMOUVln/01Yu7wMXGp12KWevzuo8ZE5iqTkaQWXWvnas9Ggw4K0Q5TgSp9/6Xkro+Y77nZ3AuNWMDZFxkAmwKWpNbSYTPejg7i7rBMLbheJFGgAHE41/OLBCgFjWvWBeQ0s3l4CSgGOByKU+h7fs7kkEZcCzGGk3mug3sf6EvrBcYukRNv8002uArssWGOlHbxikxTR34bFaf14FZewnUW3StMOXvCDQ8FzFoXyN7RTnpQuXeBVhnsJeEnMWPydpwTHdqnKbwilAlfPjyvaq2SaVBd4+asJVyWK/fBIqtGJbvAKbricskRMC8/KwTIlODKkqdwMQZq1P27kt/JWEpZFM/jTchcDb7NarzfBrjzcU9fAa4sSnGjfWPPgRNuv1hNly/m29ipEu5jWUz7PVuDtN5CrrdTnggScZIPHekrdoUjA6y+mtFU2CUkDbqpGBAvRROBmyOECeitw6FXVMHjaM4KT1fdW4FK3rl1cxmqF0ixNaqHQCDzn5zNuHN6wWtuc/VPalW4EviycGk2PS4dYy+N0VMjIbwWue7MOtbJeRjNw7bt1qOS3BNe7k45aoPJt6mqgfaMRTHAJpLGPBPpDvdpX5l/LuWNSYsimQ3d5TNrGK2Vxw1Lp0S3fVrR0p/lcDA1ogaxQ/Ft+QF2QBTctC25aFty0LLhpWXDTsuCmZcFNy4KblgU3LQtuWhbctCy4aVlw07LgpvVPgAfuZ2fkootQCvDuy4KblgU3LQtuWhbctCy4aVlw07LgpmXBTavPZtWJuqgZQ7y53kFXdqpO1EWd2IssOdtqyl5mPNtOPstv4vQeGvdYIc7MWyh8gL/jIx/3OPgblnI/Alf5FHdX3Gs48rZR+nF3U5HbcOwm9FYvaOylLfybnLdp+f9EtJPUMWti0ES8uW6pTTxwMV1ON4cfZO+pbujyc9hMQQyX/wDcwc4g7imY0gAAAABJRU5ErkJggg==');
+    width: 10px;
+    height: 14px;
+    background-repeat: no-repeat !important;
+    background-position: center;
+    background-size: cover;
+}
+
+.userProfileTable_feild .sec .body .body_inner ul li:last-child::after {
+    content: '';
+    position: absolute !important;
+    top: 5px;
+    left: 0;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/5073/5073156.png');
+    width: 13px;
+    height: 13px;
+    background-repeat: no-repeat !important;
+    background-position: center;
+    background-size: cover;
+}
+
+.userProfileTable_feild .sec.first .body table tbody,
+.userProfileTable_feild .sec.first .body td,
+.userProfileTable_feild .sec.first .body tfoot,
+.userProfileTable_feild .sec.first .body th,
+.userProfileTable_feild .sec.first .body thead,
+.userProfileTable_feild .sec.first .body tr {
+    border: none !important;
+    white-space: nowrap;
+
+}
+
+.userProfileTable_feild .sec table tr td,
+.userProfileTable_feild .sec table tr th {
+    font-size: 12px;
+    padding: 3px 5px;
+}
+/* .userProfileTable_feild .sec .body_inner {
+    height: 130px !important;
+    overflow-y: scroll !important;
+} */
+
+
+.userProfileTable_feild .sec.des .body_inner::-webkit-scrollbar-thumb {
+    background: #ededed;
+    border-radius: 10px 0 10px 0;
+}
+
+.userProfileTable_feild .sec.des .body_inner::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #36454F;
+}
+
+.userProfileTable_feild .sec.des table tbody tr td {
+    border-right: 2px solid #ced4da !important;
+    border-left: 2px solid #ced4da !important;
+}
+
+
+.userProfileTable_feild .sec.des table thead tr {
+    border: 2px solid #ced4da !important;
+    background-color: var(--peach);
+}
+
+.userProfileTable_feild .sec.des table tbody tr:last-child {
+    border-bottom: 2px solid #ced4da !important;
+}
+
+.userProfileTable_feild .sec.des table thead tr th {
+    border: 1px solid #ced4da !important;
+    white-space: nowrap;
+}
+
+
+.userProfileTable_feild .sec.des.third table tbody tr td {
+    border-right: none !important;
+    border-bottom: none !important;
+}
+
+.userProfileTable_feild .sec.des.third table tr td.bold{
+    font-weight: bold;
+}
+
+/* pagination */
+
+.userProfileTable_feild .pagination {
+    margin: 0;
+}
+
+.userProfileTable_feild .pagination .page-link {
+    background-color: #f8f9fa;
+    color: #000;
+    padding: 2px 10px;
+}
+
+.userProfileTable_feild .pagination .page-link:focus {
+    background-color: #f8f9fa;
+    color: #000;
+    box-shadow: none;
+    /* border-color: #0d6efd; */
+}
+
+.userProfileTable_feild .pagination .page-link:hover {
+    background-color: #f8f9fa;
+    color: #000;
+    border-color: #0d6efd;
+    box-shadow: none;
+}
+
+/* pagination */
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    .main_dashboard .cennt {
+        padding: 5% 20px 37% 20px !important;
+        margin: 0 !important;
+    }
+
+    .main_dashboard .userProfileTable_feild {
+        margin: 0 !important;
+    }
+  }

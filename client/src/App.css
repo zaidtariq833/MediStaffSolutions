@@ -1,0 +1,421 @@
+:root {
+  --peach: peachpuff;
+  --blue: #6d90c6;
+}
+
+/* Color codes */
+/* #6d90c6 */
+/* peachpuff */
+/* #36454f */
+/* #000 */
+/* #f1f1f1 */
+/* #ddd */
+
+
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* .view .row {
+    display: grid;
+}  */
+
+.view {
+  /* background-color: linear-gradient(180deg, rgba(0,4,71,1) 0%, rgba(26,43,94,1) 100%) !important; */
+  /* background-color: #f9f6f6;s */
+  height: 100vh;
+  width: 100%;
+  position: sticky;
+  overflow: hidden !important;
+}
+
+.view .container-fluid {
+  padding: 0 !important;
+}
+
+.navv {
+  background-color: #36454f !important;
+}
+
+/* .navv .navbar-nav{
+  overflow-x: hidden;
+} */
+
+.view .error_main + .navv {
+  display: none !important;
+}
+
+.navv {
+  z-index: 1 !important;
+  position: sticky;
+  top: -1px;
+}
+
+.navv .navbar-nav ul {
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+}
+
+.navv .navbar-nav ul li {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navv .navbar-nav ul:first-child li a {
+  font-size: 12px;
+  /* color: #fff; */
+  color: #000 !important;
+  padding: 7px 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 1px solid peachpuff;
+  background-color: peachpuff;
+  /* margin: 7px !important; */
+  text-decoration: none;
+}
+
+.navv .navbar-nav ul li .divOne a {
+  font-size: 12px;
+  /* color: #fff; */
+  color: #000 !important;
+  padding: 0 10px;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border: 1px solid transparent;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.navv a.nav-link {
+  display: inline !important;
+}
+.navv a:hover,
+.navv a:active,
+.navv a:focus,
+.navv .navbar-nav ul li a:hover,
+.navv .navbar-nav ul li a:active,
+.navv .navbar-nav ul li a:focus {
+  /* color: #fff !important; */
+  color: #000 !important;
+}
+
+.navv ul li .divOne {
+  position: absolute;
+  top: 80%;
+  visibility: hidden;
+  width: fit-content;
+  min-width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0;
+  transition: all 0.3s ease;
+  z-index: 1;
+  background-color: #000;
+  box-shadow: 1rem 1rem 1.5rem #f1f1f1;
+}
+
+.navv ul li .divOne .divOne_ {
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column !important;
+  list-style: none;
+  transition: all 0.3s ease;
+  background: #fff !important;
+  border-top: none !important;
+  border: 2px solid #ddd;
+  /* transform: translateY(100%); */
+  z-index: 1;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+/* .navv ul li .divOne .divOne_:first-child {
+  border-right: none;
+} */
+
+.navv ul li:hover .divOne > .divOne_ {
+  visibility: visible;
+  transform: none;
+  opacity: 1;
+}
+
+.navv ul li .divOne .divOne_ .list ul {
+  flex-direction: column !important;
+  width: 12rem;
+  display: flex;
+  border-radius: 0 !important;
+  margin: 3px 0;
+}
+
+.navv ul li .divOne .divOne_:last-child {
+  border-bottom: 2px solid #ddd;
+}
+
+.navv ul li .divOne .divOne_ .list ul li {
+  padding: 3px 10px !important;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  z-index: 0 !important;
+  width: 100%;
+}
+
+.navv ul li .divOne .divOne_ .list ul li:hover {
+  background-color: #36454f;
+  color: #fff;
+}
+
+.navv ul li .divOne .divOne_ .list ul li a {
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  /* padding: 0 10px; */
+}
+
+.navv ul li .divOne .divOne_ a {
+  white-space: nowrap;
+  color: #000;
+}
+
+.navv ul li .divOne .divOne_ a:hover,
+.navv ul li .divOne .divOne_ a:focus {
+  color: #000 !important;
+}
+
+.navv ul li .divOne .divOne_ .list ul li a:focus {
+  color: #000 !important;
+}
+
+.navv ul li .divOne .divOne_ .list ul li a i {
+  margin: 0 10px 0 0;
+}
+
+.navv ul li .divOne .divOne_ .list ul li:hover a {
+  color: #fff !important;
+}
+
+/* for list */
+
+.navv ul li .divOne .divOne_ ul li ul {
+  position: absolute;
+  top: -10%;
+  left: 100%;
+  /* right: -100%; */
+  /* right: -165%; */
+  visibility: hidden !important;
+  width: fit-content;
+  min-width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0;
+  transition: all 0.3s ease;
+  z-index: 2 !important;
+  background-color: #000;
+  box-shadow: 1rem 1rem 1.5rem #f1f1f1;
+}
+
+.navv ul li .divOne .divOne_ ul li ul li {
+  position: relative;
+  visibility: hidden !important;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row !important;
+  list-style: none;
+  transition: all 0.3s ease;
+  background: #fff !important;
+  border-top: 2px solid #ddd !important;
+  border-left: 2px solid #ddd !important;
+  border-right: 2px solid #ddd !important;
+  border-bottom: none !important;
+  transform: translateY(100%);
+  z-index: 2 !important;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+.navv ul li .divOne .divOne_ ul li ul li:last-child {
+  border-bottom: 2px solid #ddd !important;
+}
+
+.navv ul li .divOne .divOne_ ul li:hover ul > li {
+  visibility: visible !important;
+  transform: none;
+  opacity: 1;
+  width: 100%;
+}
+
+.navv ul li .divOne .divOne_ .list ul li:hover ul li a {
+  color: #000 !important;
+}
+
+.navv ul li .divOne .divOne_ .list ul li ul li:hover {
+  background-color: #36454f !important;
+}
+
+.navv ul li .divOne .divOne_ .list ul li:hover ul li:hover a {
+  color: #fff !important;
+}
+
+/* for div */
+
+.navv ul li .divOne .divOne_ ul li .listtt_ing {
+  position: absolute;
+  top: -10%;
+  left: 100%;
+  visibility: hidden !important;
+  width: fit-content;
+  min-width: fit-content;
+  height: fit-content !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0;
+  transition: all 0.6s ease;
+  z-index: 2 !important;
+  background-color: #000;
+  box-shadow: 1rem 1rem 1.5rem #f1f1f1;
+}
+
+.navv ul li .divOne .divOne_ ul li .listtt_ing .listtt_ing____ {
+  position: relative;
+  visibility: hidden !important;
+  opacity: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column !important;
+  list-style: none;
+  transition: all 0.6s ease;
+  background: #fff !important;
+  border-top: 2px solid #ddd !important;
+  border-left: 2px solid #ddd !important;
+  border-right: 2px solid #ddd !important;
+  border-right: 2px solid #ddd !important;
+  border-bottom: 2px solid #ddd !important;
+  transform: translateY(100%);
+  z-index: 2 !important;
+  padding: 0;
+  text-transform: capitalize;
+  height: 100px !important;
+  width: 300px !important;
+}
+
+.navv ul li .divOne .divOne_ ul li:hover .listtt_ing > .listtt_ing____ {
+  visibility: visible !important;
+  transform: none;
+  transition: all 0.6s ease;
+  opacity: 1;
+}
+
+.navv ul li .divOne .divOne_ ul li:hover .listtt_ing .listtt_ing____ p {
+  font-size: 14px;
+  margin: 0;
+  white-space: nowrap;
+  font-weight: 500;
+  color: #000;
+}
+
+/* .navv ul li .divOne .divOne_ ul li:hover .listtt_ing  .listtt_ing____  .list{
+
+} */
+
+/* for div */
+
+.navv ul li .divOne .listtt {
+  z-index: 0 !important;
+}
+
+.navv ul li .divOne .list-inline .list ul {
+  display: flex;
+  flex-direction: row !important;
+  width: fit-content;
+}
+
+.navv ul li .divOne .list-inline .list ul li {
+  flex-direction: row;
+}
+
+.navv ul li .divOne .list-inline .list ul li a {
+  width: fit-content !important;
+  white-space: nowrap;
+}
+
+.navv ul li .divOne .list-inline p {
+  font-size: 14px;
+  margin: 0;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.navv ul li .divOne .hello li {
+  width: 500px;
+}
+
+.navv ul li .divOne .hello ul {
+  height: 250px;
+  overflow-y: auto;
+}
+
+.navv .reports_1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navv .reoprts__sub {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.navv .fa-plus {
+  border: 1px solid #36454f;
+  border-radius: 100%;
+}
+
+/* this is test add */
+
+
+/* DropDown */
+.selectFlield {
+  position: relative;
+  width: 100%;
+}
+.selectFlield input {
+  padding-right: 20px !important;
+}
+
+.selectFlield .selectFlield_dropdown {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 6px;
+  z-index: 9999999;
+  min-width: 100%;
+  /* width: 18rem;
+  overflow: auto; */
+}
+
+.selectFlield .selectFlield_dropdown.extra {
+    width: 20rem;
+    overflow: auto;
+}
+.selectFlield .selectFlield_dropdown table tr th {
+  text-align: center  ;
+}

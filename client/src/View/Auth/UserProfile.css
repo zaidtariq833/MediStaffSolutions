@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+
+/* .navbar_ {
+  display: none !important;
+} */
+
+
+.main_user2 {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  /* background-image: url('https://tse4.mm.bing.net/th?id=OIP.tT4ZKI62iyRtlaohrF1ekwHaEm&pid=Api&P=0'); */
+  /* background-image: url('../../assets/images/background_pics/1.jpg'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* padding-top: 5%; */
+}
+
+.main_user2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #6fb9b9;
+}
+
+.login_form1 {
+  width: 28%;
+  height: fit-content;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #d3d3d3;
+  background-color:rgb(255 255 255 / 78%);
+  /* background-color: rgb(255 255 255 / 30%); */
+  z-index: 1;
+  overflow: hidden;
+  margin: auto;
+
+}
+
+.login_form1 .form {
+  height: auto;
+}
+
+
+
+.login_form1 .alertt {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 3px 3px 0 0;
+  font-weight: bold;
+  /*  */
+  /* width: 70%;
+  margin:  auto !important; */
+}
+
+.login_form1 .form label {
+  font-size: .9rem;
+  font-weight: 500;
+  color: #000;
+  margin-left: 3px;
+}
+
+.login_form1 .form input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+  background-color: rgb(255 255 255 / 61%);
+  box-shadow: 0px 0px 2px #000 ;
+  border-radius: 3px;
+  border: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.login_form1 .form input::placeholder {
+  color: #000 !important;
+  
+}
+
+.login_form1 .form input:focus,
+.login_form1 .form select:focus {
+  outline: 2px solid #000;
+}
+
+.login_form1 .form .form_btn {
+  background-color: #000;
+  border-color: transparent;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.login_form1 .form .form_btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.login_form1 .form .message {
+  margin: 15px 0 0;
+  color: #000;
+  /* color: #fff; */
+  font-size: .8rem;
+  font-weight: bold;
+}
+
+.login_form1 .form .message a {
+  color: #000;
+  text-decoration: underline
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+  .main_dashboard .form_department {
+      width: 100% !important;
+  }
+
+  .main_dashboard .cennt {
+      padding: 0  20px ;
+  }
+}
+
+
+/* @media only screen and (max-width: 656px) {
+  .main_dashboard .form_department .form .input_group {
+      flex-direction: column;
+  }
+
+  .main_dashboard .form_department .form .input_group div {
+      width: 100%;
+  }
+} */
