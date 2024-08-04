@@ -24,24 +24,24 @@ function Dashboard() {
 
   const { ShiftScheduling } = useSelector((state) => state.shiftScheduling);
 
-  useEffect(() => {
-    if (authuser.isError) {
-      toast.error(authuser.message);
-    }
+  // useEffect(() => {
+  //   if (authuser.isError) {
+  //     toast.error(authuser.message);
+  //   }
 
-    if (authuser.isSuccess || authuser.user) {
-      navigate("/dashboard");
-    } else {
-      navigate("/");
-      toast.error("Invailid Credentials");
-    }
-  }, [
-    authuser.user,
-    authuser.isError,
-    authuser.isSuccess,
-    authuser.message,
-    navigate,
-  ]);
+  //   if (authuser.isSuccess || authuser.user) {
+  //     navigate("/dashboard");
+  //   } else {
+  //     navigate("/");
+  //     toast.error("Invailid Credentials");
+  //   }
+  // }, [
+  //   authuser.user,
+  //   authuser.isError,
+  //   authuser.isSuccess,
+  //   authuser.message,
+  //   navigate,
+  // ]);
 
   useEffect(() => {
     dispatch(getAllStaffManagementData());
@@ -60,28 +60,6 @@ function Dashboard() {
           <Container fluid>
             <Row>
               <Col lg={5}>
-                <div className="sec sec_">
-                  <div className="head">
-                    {/* <label>Intouch</label> */}
-                    <label>Reporting Analysis</label>
-                  </div>
-                  <div className="body pe-2  ps-4 d-flex">
-                    <div className="body_inner my-2 w-50">
-                      <h5>Created By Me</h5>
-                      <ListGroup variant="flush" as="ul">
-                        <ListGroup.Item as="li">Overdue: 0</ListGroup.Item>
-                        <ListGroup.Item as="li">Pending: 0</ListGroup.Item>
-                      </ListGroup>
-                    </div>
-                    <div className="body_inner my-2 w-50">
-                      <h5>Assigned To Me</h5>
-                      <ListGroup variant="flush" as="ul">
-                        <ListGroup.Item as="li">Overdue: 0</ListGroup.Item>
-                        <ListGroup.Item as="li">Pending: 0</ListGroup.Item>
-                      </ListGroup>
-                    </div>
-                  </div>
-                </div>
                 <div className="sec des second my-2">
                   <div className="head">
                     <label>Shift Scheduling</label>

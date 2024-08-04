@@ -9,7 +9,6 @@ const addUserDetailData = asyncHandler(async (req, res) => {
     userDetail_userAccountInformation_password,
     userDetail_userAccountInformation_userName,
     userDetail_userAccountInformation_userLogin,
-    userDetail_role,
     userDetail_userAccountInformation_mobillePhone,
   } = req.body;
 
@@ -35,27 +34,23 @@ const addUserDetailData = asyncHandler(async (req, res) => {
     2
   );
 
-  const user = await userDetailModel.create(
-    {
-      userDetail_userAccountInformation_email,
-      userDetail_userAccountInformation_password: hashedPassword,
-      userDetail_userAccountInformation_userName,
-      userDetail_userAccountInformation_role,
-      userDetail_userAccountInformation_userLogin,
-      userDetail_userAccountInformation_mobillePhone,
-    }
-  );
-  
-  
-  getToken(user._id),
-  
-  res.status(200).json({
-    success: true,
-    uid: user._id,
-    userEmail: user.userDetail_userAccountInformation_email,
-    userPasword: user.userDetail_userAccountInformation_password,
-    userRole: user.userDetail_userAccountInformation_role
+  const user = await userDetailModel.create({
+    userDetail_userAccountInformation_email,
+    userDetail_userAccountInformation_password: hashedPassword,
+    userDetail_userAccountInformation_userName,
+    // userDetail_userAccountInformation_role,
+    userDetail_userAccountInformation_userLogin,
+    userDetail_userAccountInformation_mobillePhone,
   });
+
+  getToken(user._id),
+    res.status(200).json({
+      success: true,
+      uid: user._id,
+      userEmail: user.userDetail_userAccountInformation_email,
+      userPasword: user.userDetail_userAccountInformation_password,
+      // userRole: user.userDetail_userAccountInformation_role,
+    });
 });
 
 const getUserDetailData = asyncHandler(async (req, res) => {
@@ -97,7 +92,7 @@ const loginUser = asyncHandler(async (req, res) => {
     userDetail_userAccountInformation_password,
   } = req.body;
 
-  console.log(req.body, "body")
+  console.log(req.body, "body");
 
   if (userDetail_userAccountInformation_email === "") {
     res.status(401);
@@ -113,7 +108,7 @@ const loginUser = asyncHandler(async (req, res) => {
     userDetail_userAccountInformation_email,
   });
 
-  console.log(user, "user in backend")
+  console.log(user, "user in backend");
 
   if (
     user &&
@@ -122,12 +117,11 @@ const loginUser = asyncHandler(async (req, res) => {
       user.userDetail_userAccountInformation_password
     ))
   ) {
-    getToken(user._id)
+    getToken(user._id);
     res.status(200).json({
       success: true,
       userEmail: user.userDetail_userAccountInformation_email,
       userName: user.userDetail_userAccountInformation_userName,
-      userRole: user.userDetail_userAccountInformation_role
     });
   } else {
     throw new Error("Invailid Credential!.");

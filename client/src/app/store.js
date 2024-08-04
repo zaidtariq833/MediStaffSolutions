@@ -5,6 +5,7 @@ import ShiftSchedulingReducer from "../features/intouch/intouchSlice";
 import StaffManagementReducer from "../features/workHistory/workHistorySlice";
 import PayrollReducer from "../features/payroll/payrollSlice";
 import OtherStaffReducer from "../features/hrManager/OtherStaff/OtherStaffSlice";
+import EmployeesReducer from "../features/employee/EmployeeSlice";
 
 export const store = configureStore({
   reducer: {
@@ -14,5 +15,6 @@ export const store = configureStore({
     shiftScheduling: ShiftSchedulingReducer,
     payroll: PayrollReducer,
     otherStaff: OtherStaffReducer,
+    employee: EmployeesReducer,
   },
 });

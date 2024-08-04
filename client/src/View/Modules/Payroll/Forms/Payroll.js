@@ -66,10 +66,11 @@ function Payroll() {
     payroll_department: "",
     payroll_hours_worked: 0,
     payroll_gross_monthly_salary: 0,
-    payroll_bonus: Number(bonus),
-    payroll_deductions: 0,
+    payroll_tax_bracket: 0,
+    payroll_amount_after_tax_deduction: 0,
     payroll_other_benefits: "",
-    payroll_overtime_hours: 0,
+    payroll_overtime_hours_worked: 0,
+    payroll_bonus : 0,
   });
 
   const payrollData = useSelector((state) => state.payroll.PayrollTemp);
@@ -85,7 +86,7 @@ function Payroll() {
         payroll_bonus: payrollData.payroll_bonus,
         payroll_deductions: payrollData.payroll_deductions,
         payroll_other_benefits: payrollData.payroll_other_benefits,
-        payroll_overtime_hours: payrollData.payroll_overtime_hours,
+        payroll_overtime_hours_worked: payrollData.payroll_overtime_hours_worked,
       });
     }
   }, [dispatch, payrollData]);
@@ -225,7 +226,7 @@ function Payroll() {
 
                       <div className="inner_ d-flex mb-3">
                         <div className="right w-25">
-                          <Form.Label className="">Department:</Form.Label>
+                          <Form.Label className="">Other Benefits:</Form.Label>
                         </div>
                         <div className="py-1 px-2 left w-75">
                           <Form.Select
@@ -258,6 +259,22 @@ function Payroll() {
                             className="w-100"
                             name="payroll_deductions"
                             value={payrolled.payroll_deductions}
+                            onChange={handleChange}
+                          />
+                        </div>
+                      </div>
+                      <div className="inner_ d-flex mb-3">
+                        <div className="right w-25">
+                          <Form.Label style={{ whiteSpace: "nowrap" }}>
+                            Overtime Hours Worked:
+                          </Form.Label>
+                        </div>
+                        <div className="py-1 px-2 left w-75">
+                          <Form.Control
+                            type="text"
+                            className="w-100"
+                            name="payroll_overtime_hours_worked"
+                            value={payrollData.payroll_overtime_hours_worked}
                             onChange={handleChange}
                           />
                         </div>

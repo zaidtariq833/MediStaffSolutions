@@ -43,7 +43,7 @@ function Doctors() {
       toast.error(authuser.message);
     }
     if (authuser.isSuccess || authuser.user) {
-      navigate("/otherStaff");
+      navigate("/hrManagers/otherStaff");
     } else {
       navigate("/");
       toast.error("Invailid Credentials");
@@ -65,7 +65,7 @@ function Doctors() {
     otherStaff_colleagues_engagement: 0,
     otherStaff_experience: "",
     otherStaff_marital_status: "",
-    otherStaff_status: true,
+    otherStaff_status: "",
   });
 
   //   const departmentData = [
@@ -208,7 +208,7 @@ function Doctors() {
 
                       <div className="inner_ inner__ d-flex border-bottom">
                         <div className="right w-25 d-flex align-items-center">
-                          <Form.Label className="">Employee ID:</Form.Label>
+                          <Form.Label className="">Hours Worked:</Form.Label>
                         </div>
                         <div className="py-1 px-2 left w-75">
                           <Form.Control
@@ -235,11 +235,10 @@ function Doctors() {
                             onChange={handleChange}
                           >
                             <option></option>
-                            <option>Below Matriculation</option>
-                            <option>Matriculation</option>
-                            <option>Intermediate</option>
-                            <option>Bachelor's</option>
-                            <option>Master's</option>
+                            <option>Car EMI</option>
+                            <option>EOBI</option>
+                            <option>Reimbursmance</option>
+                            <option>Health Benefits</option>
                           </Form.Select>
                         </div>
                       </div>
@@ -249,15 +248,15 @@ function Doctors() {
                           <Form.Label
                             style={{ whiteSpace: "nowrap", fontSize: "12px" }}
                           >
-                            Blood Group
+                            OverTime Hours
                           </Form.Label>
                         </div>
                         <div className=" px-2 left w-75 d-flex">
-                          <div className="w-50 mt-1">
+                          <div className="w-100 mt-1">
                             <Form.Control
                               type="text"
                               className="w-25"
-                              name="staff_management_first_worked"
+                              name="otherStaff_blood_group"
                               value={otherStaff.otherStaff_blood_group}
                               onChange={handleChange}
                             />
@@ -270,7 +269,7 @@ function Doctors() {
                           <Form.Label>Colleagues Engagement:</Form.Label>
                         </div>
                         <div className=" px-2 left w-75 d-flex">
-                          <div className="w-50 mt-1">
+                          <div className="w-100 mt-1">
                             <Form.Range
                               min={0}
                               max={100}
@@ -289,11 +288,11 @@ function Doctors() {
                           <Form.Label
                             style={{ whiteSpace: "nowrap", fontSize: "12px" }}
                           >
-                            Experience
+                            Gross Salary
                           </Form.Label>
                         </div>
                         <div className=" px-2 left w-75 d-flex">
-                          <div className="w-50 mt-1">
+                          <div className="w-100 mt-1">
                             <Form.Control
                               type="text"
                               className="w-25"
@@ -310,21 +309,18 @@ function Doctors() {
                           <Form.Label
                             style={{ whiteSpace: "nowrap", fontSize: "12px" }}
                           >
-                            Marital Status
+                            Bonus
                           </Form.Label>
                         </div>
                         <div className=" px-2 left w-75 d-flex">
-                          <div className="w-50 mt-1">
-                            <Form.Select
-                              className=""
+                          <div className="w-100 mt-1">
+                            <Form.Control
+                              type="text"
+                              className="w-25"
                               name="otherStaff_marital_status"
                               value={otherStaff.otherStaff_marital_status}
                               onChange={handleChange}
-                            >
-                              <option></option>
-                              <option>Single</option>
-                              <option>Married</option>
-                            </Form.Select>
+                            />
                           </div>
                         </div>
                       </div>
@@ -334,21 +330,18 @@ function Doctors() {
                           <Form.Label
                             style={{ whiteSpace: "nowrap", fontSize: "12px" }}
                           >
-                            Status
+                            Deductions
                           </Form.Label>
                         </div>
                         <div className=" px-2 left w-75 d-flex">
-                          <div className="w-50 mt-1">
-                            <Form.Select
-                              className=""
+                          <div className="w-100 mt-1">
+                            <Form.Control
+                              type="text"
+                              className="w-25"
                               name="otherStaff_status"
                               value={otherStaff.otherStaff_status}
                               onChange={handleChange}
-                            >
-                              <option></option>
-                              <option>Active</option>
-                              <option>Not Active</option>
-                            </Form.Select>
+                            />
                           </div>
                         </div>
                       </div>

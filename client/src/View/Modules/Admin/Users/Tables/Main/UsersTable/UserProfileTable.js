@@ -28,6 +28,7 @@ function UserProfileTable() {
   }, []);
 
   const userProfileData = useSelector((state) => state.userDetail.UserDetail);
+  console.log(userProfileData, "user profile data")
 
   return (
     <main className="main_userProfileTable">

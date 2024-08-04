@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 
 const shiftSchedulingSchema = mongoose.Schema({
-  shiftScheduling_type: { type: String },
-  shiftScheduling_doctor_name: { type: String },
-  shiftScheduling_week_day: { type: String },
-  shiftScheduling_total_patients: { type: Number },
-  shiftScheduling_assigned_branch: { type: String },
-  shiftScheduling_dept: { type: String },
+  shiftScheduling_type: { type: String, required : true },
+  shiftScheduling_doctor_name: { type: String, required : true },
+  shiftScheduling_week_day: { type: String, required : true },
+  shiftScheduling_total_patients: { type: Number, required : true },
+  shiftScheduling_assigned_branch: { type: String, required : true },
+  shiftScheduling_dept: { type: String, required : true },
 });
 
 module.exports = mongoose.model("shiftSchedulingSchema", shiftSchedulingSchema);

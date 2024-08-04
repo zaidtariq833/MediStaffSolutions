@@ -29,7 +29,6 @@ function User() {
     userDetail_userAccountInformation_userName: "",
     userDetail_userAccountInformation_userLogin: "",
     userDetail_userAccountInformation_email: "",
-    userDetail_role: "",
     userDetail_userAccountInformation_mobillePhone: "",
     userDetail_userAccountInformation_password: "",
     userDetail_userAccountInformation_retypepassword: "",

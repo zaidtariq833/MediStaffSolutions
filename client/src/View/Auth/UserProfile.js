@@ -51,6 +51,7 @@ function UserProfile() {
 
   const userlogin = (e) => {
     e.preventDefault();
+    navigate("/dashboard");
     disptach(reset());
 
     const userData = {

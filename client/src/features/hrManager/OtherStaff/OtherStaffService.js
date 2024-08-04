@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const OTHER_STAFF_API_URL = "/api/hrmanagers/otherstaff";
+const OTHER_STAFF_API_URL = "/api/hrmanagers/otherstaff/";
 
 const getOtherStaff = async () => {
   const response = await axios.get(OTHER_STAFF_API_URL + "getotherstaff/");
@@ -12,10 +12,12 @@ const getSingleOtherStaff = async (data) => {
     `${OTHER_STAFF_API_URL}getsingleotherstaff/${data.id}`
   );
   return response.data;
-};
+}; 
+
 const addOtherStaff = async (otherStaffData) => {
+  console.log(otherStaffData, "other staff in service")
   const response = await axios.post(
-    OTHER_STAFF_API_URL + "addotherstaff/",
+    OTHER_STAFF_API_URL + "addotherstaff",
     otherStaffData
   );
   return response.data;

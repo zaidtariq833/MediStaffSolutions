@@ -3,6 +3,7 @@ import axios from "axios";
 const USERDETAIL_API_URL = "/api/userdetail/";
 
 const addUserDetailData = async (Data) => {
+  console.log(Data, "data data data")
   const response = await axios.post(
     USERDETAIL_API_URL + "adduserdetail/",
     Data

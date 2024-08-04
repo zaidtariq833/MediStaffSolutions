@@ -11,6 +11,7 @@ const initialState = {
 };
 
 export const login = createAsyncThunk("auth/login", async (user, thunkAPI) => {
+  console.log(user, "user added")
   try {
     const userr = await authService.login(user);
     return thunkAPI.fulfillWithValue(userr);

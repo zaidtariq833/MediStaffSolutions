@@ -18,7 +18,11 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.6",
     "nodemon": "^2.0.16",
+    "papaparse": "^5.4.1",
+    "plotly.js-dist": "^2.33.0",
     "react-chartjs-2": "^5.2.0",
-    "react-range": "^1.8.14"
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-range": "^1.8.14",
+    "regression": "^2.0.1"
   }
 }

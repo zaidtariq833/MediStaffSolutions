@@ -36,6 +36,7 @@ import HRManagersTable from "./View/Modules/HRManagers/Table/HRManagersTable";
 import Doctors from "./View/Modules/HRManagers/Doctors/Doctors";
 import Nurses from "./View/Modules/HRManagers/Nurses/Nurses";
 import OtherStaff from "./View/Modules/HRManagers/OtherStaff/OtherStaff";
+import EmployeeTable from "./View/Modules/Employee/EmployeeTable";
 
 function App() {
   return (
@@ -87,6 +88,8 @@ function App() {
               {/* Form */}
               <Route path="/staffManagement" element={<WorkHistory />} />
               <Route path="/staffManagement/:id" element={<WorkHistory />} />
+
+              <Route path="/employeeTable" element={<EmployeeTable />} />
 
               {/* Forms */}
               {/* Admin */}

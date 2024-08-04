@@ -17,78 +17,139 @@ function Navigation() {
     navigate("/");
   };
 
+  let authUser = useSelector((state) => state.auth);
+
   return (
     <Navbar bg="light " className="navbar_ d-block">
       <div className="logo" onClick={userLogout}>
         <img src={logo} width="50%" alt="" />
       </div>
-      <ListGroup as="ul" className="list">
-        <ListGroup.Item as="li">
-          <div className="d-flex justify-content-between align-items-center list_itemm ">
-            <NavLink to="/shiftSchedulingTable">
-              <i className="fa-solid fa-bars"></i>{" "}
-              <span style={{fontSize: "13px"}}> Shift Scheduling </span>
-            </NavLink>
-          </div>
-        </ListGroup.Item>
-        <ListGroup.Item as="li">
-          <div className="d-flex justify-content-between align-items-center list_itemm ">
-            <NavLink to="/staffManagementTable">
-              <i className="fa-solid fa-briefcase"></i>
-              <span style={{fontSize: "13px"}}> Staff Management </span>
-            </NavLink>
-          </div>
-        </ListGroup.Item>
-        <ListGroup.Item as="li">
-          <div className="d-flex justify-content-between align-items-center list_itemm ">
-            <NavLink to="/performanceAnalysisTable">
-              <i className="fa-solid fa-registered"></i>{" "}
-              <span style={{fontSize: "13px"}}> Performance Analysis</span>
-            </NavLink>
-          </div>
-        </ListGroup.Item>
-        <ListGroup.Item as="li">
-          <div className="d-flex justify-content-between align-items-center list_itemm ">
-            <NavLink to="/hrManagersTable">
-              <i className="fa-solid fa-users"></i>
-              <span style={{ fontSize: "13px" }}>HR Managers</span>
-            </NavLink>
-          </div>
-        </ListGroup.Item>
-        <ListGroup.Item as="li">
-          <div className="d-flex justify-content-between align-items-center list_itemm ">
-            <NavLink to="/hrManagers/doctors">
-              <i class="fa-solid fa-user-doctor"></i>
-              <span style={{ fontSize: "13px" }}>HR Managers / Doctor</span>
-            </NavLink>
-          </div>
-        </ListGroup.Item>
-        <ListGroup.Item as="li">
-          <div className="d-flex justify-content-between align-items-center list_itemm ">
-            <NavLink to="/hrManagers/nurses">
-              <i class="fa-solid fa-user-nurse"></i>
-              <span style={{fontSize: "13px"}}>HR Managers / Nurses</span>
-            </NavLink>
-          </div>
-        </ListGroup.Item>
-        <ListGroup.Item as="li">
-          <div className="d-flex justify-content-between align-items-center list_itemm ">
-            <NavLink to="/hrManagers/otherStaff">
-              <i class="fa-solid fa-person"></i>
-              <span style={{fontSize: "13px"}}>HR Managers / OtherStaff</span>
-            </NavLink>
-          </div>
-        </ListGroup.Item>
-        <ListGroup.Item as="li">
-          <div className="d-flex justify-content-between align-items-center list_itemm ml-2">
-            <NavLink to="/payrollTable">
-              <i class="fa-solid fa-money-bill"></i>
-              <span style={{fontSize: "13px"}}> Payroll</span>
-            </NavLink>
-          </div>
-        </ListGroup.Item>
-      </ListGroup>
-      <ListGroup as="ul" className="list">
+      {authUser.user.userEmail == "imran@gmail.com" &&
+      authUser.user.userName == "imran" ? (
+        <ListGroup as="ul" className="list">
+          <ListGroup.Item as="li">
+            <div className="d-flex justify-content-between align-items-center list_itemm ">
+              <NavLink to="/shiftSchedulingTable">
+                <i className="fa-solid fa-bars"></i>{" "}
+                <span style={{ fontSize: "13px" }}> Shift Scheduling </span>
+              </NavLink>
+            </div>
+          </ListGroup.Item>
+          <ListGroup.Item as="li">
+            <div className="d-flex justify-content-between align-items-center list_itemm ">
+              <NavLink to="/staffManagementTable">
+                <i className="fa-solid fa-briefcase"></i>
+                <span style={{ fontSize: "13px" }}> Staff Management </span>
+              </NavLink>
+            </div>
+          </ListGroup.Item>
+          <ListGroup.Item as="li">
+            <div className="d-flex justify-content-between align-items-center list_itemm ">
+              <NavLink to="/employeeTable">
+                <i className="fa-solid fa-registered"></i>{" "}
+                <span style={{ fontSize: "13px" }}> Performance Analysis</span>
+              </NavLink>
+            </div>
+          </ListGroup.Item>
+          <ListGroup.Item as="li">
+            <div className="d-flex justify-content-between align-items-center list_itemm ">
+              <NavLink to="/hrManagersTable">
+                <i className="fa-solid fa-users"></i>
+                <span style={{ fontSize: "13px" }}>HR Managers</span>
+              </NavLink>
+            </div>
+          </ListGroup.Item>
+          <ListGroup.Item as="li">
+            <div className="d-flex justify-content-between align-items-center list_itemm ">
+              <NavLink to="/hrManagers/doctors">
+                <i class="fa-solid fa-user-doctor"></i>
+                <span style={{ fontSize: "13px" }}>HR Managers / Doctor</span>
+              </NavLink>
+            </div>
+          </ListGroup.Item>
+          <ListGroup.Item as="li">
+            <div className="d-flex justify-content-between align-items-center list_itemm ">
+              <NavLink to="/hrManagers/nurses">
+                <i class="fa-solid fa-user-nurse"></i>
+                <span style={{ fontSize: "13px" }}>HR Managers / Nurses</span>
+              </NavLink>
+            </div>
+          </ListGroup.Item>
+          <ListGroup.Item as="li">
+            <div className="d-flex justify-content-between align-items-center list_itemm ">
+              <NavLink to="/hrManagers/otherStaff">
+                <i class="fa-solid fa-person"></i>
+                <span style={{ fontSize: "13px" }}>
+                  HR Managers / OtherStaff
+                </span>
+              </NavLink>
+            </div>
+          </ListGroup.Item>
+          <ListGroup.Item as="li">
+            <div className="d-flex justify-content-between align-items-center list_itemm ml-2">
+              <NavLink to="/payrollTable">
+                <i class="fa-solid fa-money-bill"></i>
+                <span style={{ fontSize: "13px" }}> Payroll</span>
+              </NavLink>
+            </div>
+          </ListGroup.Item>
+        </ListGroup>
+      ) : (
+        <ListGroup as="ul" className="list">
+          <ListGroup.Item as="li">
+            <div className="d-flex justify-content-between align-items-center list_itemm ">
+              <NavLink to="/shiftSchedulingTable">
+                <i className="fa-solid fa-bars"></i>{" "}
+                <span style={{ fontSize: "13px" }}> Shift Scheduling </span>
+              </NavLink>
+            </div>
+          </ListGroup.Item>
+          <ListGroup.Item as="li">
+            <div className="d-flex justify-content-between align-items-center list_itemm ">
+              <NavLink to="/hrManagersTable">
+                <i className="fa-solid fa-users"></i>
+                <span style={{ fontSize: "13px" }}>HR Managers</span>
+              </NavLink>
+            </div>
+          </ListGroup.Item>
+          <ListGroup.Item as="li">
+            <div className="d-flex justify-content-between align-items-center list_itemm ">
+              <NavLink to="/hrManagers/doctors">
+                <i class="fa-solid fa-user-doctor"></i>
+                <span style={{ fontSize: "13px" }}>HR Managers / Doctor</span>
+              </NavLink>
+            </div>
+          </ListGroup.Item>
+          <ListGroup.Item as="li">
+            <div className="d-flex justify-content-between align-items-center list_itemm ">
+              <NavLink to="/hrManagers/nurses">
+                <i class="fa-solid fa-user-nurse"></i>
+                <span style={{ fontSize: "13px" }}>HR Managers / Nurses</span>
+              </NavLink>
+            </div>
+          </ListGroup.Item>
+          <ListGroup.Item as="li">
+            <div className="d-flex justify-content-between align-items-center list_itemm ">
+              <NavLink to="/hrManagers/otherStaff">
+                <i class="fa-solid fa-person"></i>
+                <span style={{ fontSize: "13px" }}>
+                  HR Managers / OtherStaff
+                </span>
+              </NavLink>
+            </div>
+          </ListGroup.Item>
+          <ListGroup.Item as="li">
+            <div className="d-flex justify-content-between align-items-center list_itemm ml-2">
+              <NavLink to="/payrollTable">
+                <i class="fa-solid fa-money-bill"></i>
+                <span style={{ fontSize: "13px" }}> Payroll</span>
+              </NavLink>
+            </div>
+          </ListGroup.Item>
+        </ListGroup>
+      )}
+
+      {/* <ListGroup as="ul" className="list">
         <ListGroup.Item as="li">
           <div className="d-flex justify-content-between align-items-center list_itemm ">
             <NavLink to="/shiftSchedulingTable">
@@ -127,7 +188,7 @@ function Navigation() {
             </NavLink>
           </div>
         </ListGroup.Item>
-      </ListGroup>
+      </ListGroup> */}
     </Navbar>
   );
 }

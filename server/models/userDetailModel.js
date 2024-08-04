@@ -8,7 +8,7 @@ const userDetailSchema = mongoose.Schema({
     required: [true, "Please Add Email"],
     unique: true,
   },
-  userDetail_role: { type: String },
+  // userDetail_role: { type: String },
   userDetail_userAccountInformation_mobillePhone: { type: String },
   userDetail_userAccountInformation_password: {
     type: String,
